@@ -138,6 +138,9 @@
 					if (!this.selectedNotes.length) {
 						return;
 					}
+					if (this.selectedNotes.length == 1) { //prevent loop
+						return this.selectedNotes[0];
+					}
 					let newRandomNote;
 					do {
 						let randomIndex = this.getRandomInt(
